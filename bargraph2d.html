@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>bargraph</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.bargraph{
+		position: relative;
+		margin: 50px 50px;
+		width: 365px;
+		height: 230px;
+		background-color: #cff;
+	}
+	/* 柱形的分布区域 */
+	.bars{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	.bars li{
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		z-index: 99;
+		width: 30px;
+		bottom: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: white;
+	}
+	/* 图中柱形侧面的颜色*/
+	.bluebar{
+		background-color: blue;
+	}
+	.redbar{
+		background-color: red;
+	}
+	.greenbar{
+		background-color: green;
+	}
+	.orangebar{
+		background-color: orange;
+	}
+	.purplebar{
+		background-color: purple;
+	}
+	/* 图中柱形之间的间距设置 */
+	.bar1{
+		left: 21px;
+	}
+	.bar2{
+		left: 94px;
+	}
+	.bar3{
+		left: 167px;
+	}
+	.bar4{
+		left: 240px;
+	}
+	.bar5{
+		left: 313px;
+	}
+	/* 图的横坐标 */
+	.labels{
+		list-style-type: none;
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		height: 29px;
+		line-height: 29px;
+		background-color: #333;
+		color: #fff;
+	}
+	.labels li{
+		float: left;
+		overflow: hidden;
+		width: 73px;
+		text-align: center;
+	}
+	/* 图的竖坐标 */
+	.y-axis{
+		list-style-type: none;
+		position: absolute;
+		left: -45px;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		width: 40px;
+		text-align: right;
+	}
+	.y-axis li{
+		height: 50px;
+		line-height: 50px;
+	}
+	.y-axis li.units{
+		position: absolute;
+		bottom: 110px;
+		right: 22px;
+		height: auto;
+	}
+	</style>
+</head>
+<body>
+	<div class="bargraph">
+		<ul class="bars">
+			<li class="bar1 bluebar" style="height:80px;">
+				<em>40</em>
+			</li>
+			<li class="bar2 redbar" style="height:180px;">
+				<em>90</em>
+			</li>
+			<li class="bar3 greenbar" style="height:140px;">
+				<em>70</em>
+			</li>
+			<li class="bar4 orangebar" style="height:160px;">
+				<em>80</em>
+			</li>
+			<li class="bar5 purplebar" style="height:80px;">
+				<em>40</em>
+			</li>
+		</ul>
+		<ul class="labels">
+			<li>apple</li>
+			<li>pear</li>
+			<li>banana</li>
+			<li>orange</li>
+			<li>grapes</li>
+		</ul>
+		<ul class="y-axis">
+			<li>100</li>
+			<li>75</li>
+			<li>50</li>
+			<li>25</li>
+			<li>0</li>
+			<li class="units">(t)</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>bargraph</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.bargraph{
+		position: relative;
+		margin: 50px 50px;
+		width: 365px;
+		height: 230px;
+		background-color: #cff;
+	}
+	/* 柱形的分布区域 */
+	.bars{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	.bars li{
+		position: absolute;
+		bottom: 30px;
+		padding: 0;
+		margin: 0;
+		width: 30px;
+		z-index: 99;
+		line-height: 30px;
+		text-align: center;
+		color: white;
+	}
+	/* 图中柱形侧面的颜色*/
+	.bluebar{
+		background-color: blue;
+	}
+	.redbar{
+		background-color: red;
+	}
+	.greenbar{
+		background-color: green;
+	}
+	.orangebar{
+		background-color: orange;
+	}
+	.purplebar{
+		background-color: purple;
+	}
+	/* 图中柱形之间的间距设置 */
+	.bar1{
+		left: 21px;
+	}
+	.bar2{
+		left: 94px;
+	}
+	.bar3{
+		left: 167px;
+	}
+	.bar4{
+		left: 240px;
+	}
+	.bar5{
+		left: 313px;
+	}
+	/* 图的横坐标 */
+	.labels{
+		list-style-type: none;
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		height: 30px;
+		line-height: 30px;
+		background-color: #333;
+		color: #fff;
+	}
+	.labels li{
+		float: left;
+		overflow: hidden;
+		width: 73px;
+		text-align: center;
+	}
+	/* 图的竖坐标 */
+	.y-axis{
+		list-style-type: none;
+		position: absolute;
+		left: -45px;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		width: 40px;
+		text-align: right;
+	}
+	.y-axis li{
+		height: 50px;
+		line-height: 50px;
+	}
+	.y-axis li.units{
+		position: absolute;
+		bottom: 110px;
+		right: 22px;
+		height: auto;
+	}
+	/* 上下添加椭圆阴影形成圆柱效果 */
+	.top{
+		position: relative;
+		top: -6px;
+		width: 30px;
+		height: 12px;
+		-webkit-border-radius: 30px 12px;
+		-moz-border-radius: 30px/12px;
+		border-radius: 30px/12px;
+	}
+	.bottom{
+		position: absolute;
+		bottom: -6px;
+		width: 30px;
+		height: 12px;
+		-webkit-border-radius: 30px 12px;
+		-moz-border-radius: 30px/12px;
+		border-radius: 30px/12px;
+	}
+	.bluebar .top,.bluebar .bottom{
+		background-color: #00C1FF;
+	}
+	.redbar .top,.redbar .bottom{
+		background-color: #FB999D;
+	}
+	.greenbar .top,.greenbar .bottom{
+		background-color: #A7FE8C;
+	}
+	.orangebar .top,.orangebar .bottom{
+		background-color: #FCF24E;
+	}
+	.purplebar .top,.purplebar .bottom{
+		background-color: #E388F6;
+	}
+	</style>
+</head>
+<body>
+	<div class="bargraph">
+		<ul class="bars">
+			<li class="bar1 bluebar" style="height:80px;">
+				<div class="top"></div>
+				<em>40</em>
+				<div class="bottom"></div>
+			</li>
+			<li class="bar2 redbar" style="height:180px;">
+				<div class="top"></div>
+				<em>90</em>
+				<div class="bottom"></div>
+			</li>
+			<li class="bar3 greenbar" style="height:140px;">
+				<div class="top"></div>
+				<em>70</em>
+				<div class="bottom"></div>
+			</li>
+			<li class="bar4 orangebar" style="height:160px;">
+				<div class="top"></div>
+				<em>80</em>
+				<div class="bottom"></div>
+			</li>
+			<li class="bar5 purplebar" style="height:80px;">
+				<div class="top"></div>
+				<em>40</em>
+				<div class="bottom"></div>
+			</li>
+		</ul>
+		<ul class="labels">
+			<li>apple</li>
+			<li>pear</li>
+			<li>banana</li>
+			<li>orange</li>
+			<li>grapes</li>
+		</ul>
+		<ul class="y-axis">
+			<li>100</li>
+			<li>75</li>
+			<li>50</li>
+			<li>25</li>
+			<li>0</li>
+			<li class="units">(t)</li>
+		</ul>
+	</div>
+</body>
+</html>
